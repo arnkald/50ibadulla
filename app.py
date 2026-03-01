@@ -4,8 +4,10 @@ from flask import Flask, request, jsonify, render_template, send_from_directory
 
 app = Flask(__name__)
 
-TELEGRAM_BOT_TOKEN = "8795557460:AAEePwZfZ7nkm3FId0d7CojBr25Xtldv9to"
-CHAT_ID = "919183343"
+import os
+
+TELEGRAM_BOT_TOKEN = os.environ.get("8795557460:AAEePwZfZ7nkm3FId0d7CojBr25Xtldv9to")
+CHAT_ID = os.environ.get("919183343")
 
 
 @app.route("/")
@@ -15,7 +17,7 @@ def index():
 
 @app.route("/music.mp3")
 def music():
-    return send_from_directory(os.path.dirname(os.path.abspath(__file__)), "music.mp3")
+    return send_from_directory(os.path.dirname(os.path.abspath(__file__)), "static/music.mp3")
 
 
 @app.route("/send", methods=["POST"])
