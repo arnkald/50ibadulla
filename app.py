@@ -9,7 +9,6 @@ import os
 TELEGRAM_BOT_TOKEN = os.environ.get("8795557460:AAEePwZfZ7nkm3FId0d7CojBr25Xtldv9to")
 CHAT_ID = os.environ.get("919183343")
 
-
 @app.route("/")
 def index():
     return render_template("index.html")
