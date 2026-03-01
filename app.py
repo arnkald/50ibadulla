@@ -49,14 +49,3 @@ def send():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port, debug=False)
-```
-
-Төменде **"Commit changes"** батырмасын басыңыз ✅
-
----
-
-## 3-ҚАДАМ: Chat ID алыңыз
-
-Браузерде мына сілтемені ашыңыз:
-```
-https://api.telegram.org/bot8795557460:AAEePojBr25Xtldv9to/getUpdates
